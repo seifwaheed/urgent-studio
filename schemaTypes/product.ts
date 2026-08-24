@@ -47,7 +47,7 @@ export const product = defineType({
       name: 'sku',
       title: 'SKU',
       type: 'string',
-      validation: (rule) => rule.required(),
+      description: 'Optional for now. Add the official SKU when it is available.',
     }),
     defineField({
       name: 'price',
