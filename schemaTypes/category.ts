@@ -28,6 +28,13 @@ export const category = defineType({
       title: 'Description',
       type: 'localizedText',
     }),
+    defineField({
+      name: 'hidden',
+      title: 'Hide from Website',
+      type: 'boolean',
+      description: 'Keeps this category and its products out of the public storefront without deleting them.',
+      initialValue: false,
+    }),
   ],
   preview: {
     select: {

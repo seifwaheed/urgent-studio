@@ -62,6 +62,13 @@ export const product = defineType({
       type: 'boolean',
       initialValue: false,
     }),
+    defineField({
+      name: 'hidden',
+      title: 'Hide from Website',
+      type: 'boolean',
+      description: 'Keeps this product out of the public storefront without deleting it.',
+      initialValue: false,
+    }),
   ],
   preview: {
     select: {
