@@ -22,6 +22,12 @@ export const siteSettings = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'email',
+      title: 'Business Email',
+      type: 'string',
+      validation: (rule) => rule.email().warning('Enter a valid email address.'),
+    }),
+    defineField({
       name: 'whatsappNumber',
       title: 'WhatsApp Number',
       type: 'string',
