@@ -36,6 +36,35 @@ export const agent = defineType({
       type: 'localizedText',
     }),
     defineField({
+      name: 'quote',
+      title: 'Personal Quote',
+      type: 'localizedText',
+      description: 'A short first-person or personal line shown on the Meet the Team page.',
+    }),
+    defineField({
+      name: 'linkedIn',
+      title: 'LinkedIn URL',
+      type: 'url',
+      validation: (rule) => rule.uri({scheme: ['https']}),
+    }),
+    defineField({
+      name: 'symbol',
+      title: 'Role Symbol',
+      type: 'string',
+      description: 'A small office-supply symbol used as a visual accent on the Meet the Team page.',
+      options: {
+        list: [
+          {title: 'Pen', value: 'pen'},
+          {title: 'Notebook', value: 'notebook'},
+          {title: 'Calculator', value: 'calculator'},
+          {title: 'Keyboard', value: 'keyboard'},
+          {title: 'Folder', value: 'folder'},
+          {title: 'Paper clip', value: 'paperclip'},
+        ],
+      },
+      initialValue: 'paperclip',
+    }),
+    defineField({
       name: 'email',
       title: 'Email',
       type: 'string',
