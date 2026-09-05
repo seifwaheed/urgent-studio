@@ -1,5 +1,6 @@
 import {agent} from './agent'
 import {category} from './category'
+import {enquiry} from './enquiry'
 import {localizedImage} from './localizedImage'
 import {localizedString} from './localizedString'
 import {localizedText} from './localizedText'
@@ -14,6 +15,7 @@ export const schemaTypes = [
   specification,
   agent,
   category,
+  enquiry,
   product,
   siteSettings,
 ]
